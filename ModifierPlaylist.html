@@ -25,13 +25,13 @@
     <div class="container">
         <div class="flex">
             <div class="logo">
-                <a href="Accueil.html" title="Cliquer ici pour revenir à l'accueil">
+                <a href="index.html" title="Cliquer ici pour revenir à l'accueil">
                     <img src="logo1.png" alt="">
                 </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="index.html">Accueil</a></li>
                     <li><a href="Chercher.html">Recherche</a></li>
                     <li><a href="AfficherPlaylist.html">Playlist</a></li>
                     <li><a href="ModifierPlaylist.html">MusiJo</a></li>
@@ -43,30 +43,41 @@
 
 <h1 class="">Coin MusiJo</h1>
 
+
+
+
 <div class="decole">
     <h2>Ajout de chanson : </h2>
-    <form class="mb-5">
-        <div class="mb-3">
-            <label for="name" class="form-label">Nom de la chanson : </label>
+    <form class="mb-md-5">
+        <div class="mb-3 form-group">
+            <label for="name" class="form-label">Nom de la chanson* : </label>
             <input type="text" class="form-control" id="name" required>
         </div>
-        <div class="mb-3">
-            <label for="artiste" class="form-label">Artiste(s) : </label>
+        <div class="mb-md-3 form-group">
+            <label for="artiste" class="form-label">Artiste(s)* : </label>
             <input type="text" class="form-control" id="artiste" required>
         </div>
-        <div class="mb-3">
-            <label for="img" class="form-label">Donner une apparence : </label>
-            <input type="text" class="form-control" id="img" pattern="([^\\s]+(\\.(?i)(jpe?g|png|gif|bmp))$)">
+        <div class="mb-md-3 form-group">
+            <label for="img" class="form-label">Ajouter une image (lien URL) à votre chanson* : </label>
+            <input type="url" class="form-control" id="img" pattern="([^\\s]+(\\.(?i)(jpe?g|png|gif|bmp))$)" required>
         </div>
 
-        <input type="submit" class="btn btn-primary" value="Ajouter">
-        <button class="btn btn-primary" value="Modifier" onclick="modifier()">Modifier</button>
-        <input type="number" class="ms-3" id="id" placeholder="ID : ">
+        <div class="mb-md-3 form-group">
+            <label for="numID" class="form-label">Entrez l'ID* : </label>
+            <input type="number" class="form-control" id="numID" placeholder="ID : " required>
+            <p class="text-danger-emphasis mt-3 invisible info">Quand vous ajouter une chanson, entrez l'ID suivant, cela vous permet modifier ou supprimer vos chansons</p>
+        </div>
+
+        <div class="col-6 float-md-start">
+            <button class="btn btn-primary m-1" value="Ajouter" onclick="ajouter()">Ajouter</button>
+            <!--<input type="submit" class="btn btn-primary" value="Ajouter">-->
+            <button class="btn btn-primary m-1" value="Modifier" onclick="modifier()" id="modif">Modifier</button>
+            <button class="btn btn-primary m-1" value="Supprimer" onclick="supprimer()" id="supp">Supprimer</button>
+        </div>
     </form>
 
 </div>
-
-
+<br><br><br><br>
 <!--Affichage de la playlist en cours-->
 <div id="carouselExample" class="carousel slide">
     <div class="carousel-inner container2" id="ajoutDeChanson">
@@ -75,35 +86,29 @@
             <p class="mt-3">Exemple 1</p>
             <p> Titre : Nevada</p>
             <p> Artiste : Vicetone</p>
-            <button class="btn btn-primary" value="Supprimer" onclick="supprimer()">Supprimer</button>
         </div>
-        <div class="carousel-item q">
+       <div class="carousel-item q">
             <img src="https://i.scdn.co/image/ab67616d0000b27368ffac372f5fe47a6c14b0bf" class="d-block w-100" alt="...">
             <p class="mt-3">Exemple 2</p>
             <p> Titre : Festival of light</p>
             <p> Artiste : KSHMR</p>
-            <button class="btn btn-primary" value="Supprimer" onclick="supprimer()">Supprimer</button>
         </div>
         <div class="carousel-item q">
             <img src="https://georgeseara.com/wp-content/uploads/2015/12/10-ReHab-and-Trevor-Guthrie_Soundwave.jpg" class="d-block w-100" alt="...">
             <p class="mt-3">Exemple 3</p>
             <p> Titre : Soundwave</p>
             <p> Artiste : REHAB</p>
-            <button class="btn btn-primary" value="Supprimer" onclick="supprimer()">Supprimer</button>
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="texte">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span class="texte">Next</span>
     </button>
 </div>
-
-
-
 
 </body>
 </html>

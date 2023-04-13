@@ -24,13 +24,13 @@
     <div class="container">
         <div class="flex">
             <div class="logo">
-                <a href="Accueil.html" title="Cliquer ici pour revenir à l'accueil">
+                <a href="index.html" title="Cliquer ici pour revenir à l'accueil">
                     <img src="logo1.png" alt="">
                 </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="index.html">Accueil</a></li>
                     <li><a href="Chercher.html">Recherche</a></li>
                     <li><a href="AfficherPlaylist.html">Playlist</a></li>
                     <li><a href="ModifierPlaylist.html">MusiJo</a></li>
@@ -44,15 +44,14 @@
 
 <div class="decole "> <!--devient invisible quand une playlist est trouvée-->
     <h2>Modifier votre playlist existante</h2>
-    <p class="text-info bg-dark p-1 text-center">Pour créer une nouvelle playlist, allez dans l'accueil</p>
-    <form action="ModifierPlaylist.html" method="get" onsubmit="return stockage()">
+    <form action="ModifierPlaylist.html" method="get">
         <div class="mb-3">
             <label for="nom" class="form-label">Nom de votre playlist : </label>
-            <input type="text" class="form-control" id="nom" >
+            <input type="text" class="form-control" id="nom" required>
         </div>
         <div class="mb-3">
             <label for="id" class="form-label">ID de la playlist : </label>
-            <input type="number" class="form-control" id="id">
+            <input type="number" class="form-control" id="id" required>
         </div>
 
         <button class="btn btn-primary" value="Modifier">Modifier</button>

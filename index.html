@@ -31,7 +31,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="index.html">Accueil</a></li>
                     <li><a href="Chercher.html">Recherche</a></li>
                     <li><a href="AfficherPlaylist.html">Playlist</a></li>
                     <li><a href="ModifierPlaylist.html">MusiJo</a></li>
@@ -49,12 +49,12 @@
     <form action="ModifierPlaylist.html" method="post" onsubmit="return stockage()">
         <div class="mb-3">
             <label for="nom" class="form-label">Nom de votre playlist : </label>
-            <input type="text" class="form-control" id="nom" >
+            <input type="text" class="form-control" id="nom" required>
         </div>
 
         <div class="mb-3">
             <label class="form-range" for="image">Ajouter une image à votre playlist : </label>
-            <input type="text" id="image" class="form-control" name="image">
+            <input type="text" id="image" class="form-control" name="image" required>
         </div>
 
         <div class="mb-3">
@@ -62,11 +62,11 @@
             <input type="color" class="form-control-color" id="couleur">
         </div>
 
-        <input type="submit" class="btn btn-primary" value="Créer">
+        <button type="submit" class="btn btn-primary" value="Créer">Créer</button>
 
     </form>
 </div> <!--creation-->
-
+<h3 class="text-center text-warning bg-dark mt-5">Cette fonctionnalité est down</h3>
 
 
 

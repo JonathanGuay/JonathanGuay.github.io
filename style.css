@@ -46,7 +46,7 @@ nav ul a:link, nav ul a:visited{
     transition: all 0.5s ease-in-out;
 }
 nav ul a:hover, nav ul a:active{
-    color: green;
+    color: #e17d7d;
 }
 header .flex{
     padding: 2rem;
@@ -77,10 +77,11 @@ h1{
 }
 /*--------------------------------------------------------------------------------------------------*/
 .decole{
-    margin: 2rem 20rem;
+    margin: 2rem 10rem;
 }
 /* Le carousel*/
 .q{
+    justify-items: center;
     text-align: center;
     width: 20rem;
     height: 25rem;
@@ -96,4 +97,91 @@ h1{
 /* Validation css*/
 input:invalid{
     background-color: #e17d7d;
+}
+input:valid{
+    background-image: url("png-clipart-green-check.png");
+    background-size: contain;
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+/*Icon pour le carousel*/
+
+.carousel-control-prev{
+    background-color: white;
+}
+.carousel-control-next{
+    background-color: white;
+}
+.carousel-control-prev-icon{
+    background-color: #4b6a83;
+}
+.carousel-control-next-icon{
+    background-color: #4b6a83;
+}
+.texte{
+    color: #4b6a83;
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+@media (max-width:1024px) {
+    .decole{
+        margin: 2rem 5rem;
+    }
+    .q{
+        width: 15rem;
+        height: 20rem;
+    }
+    .slide img{
+        height: 10rem;
+    }
+    .container2{
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .carousel-control-prev-icon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .carousel-control-next-icon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .texte{
+        font-size: 1.5rem;
+        padding-left: 0.8rem;
+    }
+}
+@media (max-width:500px) {
+    .decole{
+        margin: 2rem 2rem;
+    }
+    .carousel-control-prev{
+        width: 5rem;
+    }
+    .carousel-control-next{
+        width: 5rem;
+    }
+    .q{
+        width: 10rem;
+        height: 15rem;
+    }
+    .slide img{
+        height: 5rem;
+    }
+    .container2{
+        max-width: 150px;
+        margin: 0 auto;
+    }
+    .carousel-control-prev-icon{
+        width: 1rem;
+        height: 1rem;
+    }
+    .carousel-control-next-icon{
+        width: 1rem;
+        height: 1rem;
+    }
+    .texte{
+        font-size: 1rem;
+        padding-left: 0.2rem;
+    }
 }
