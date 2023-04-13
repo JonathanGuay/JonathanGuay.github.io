@@ -9,9 +9,8 @@ class Chanson{
 
 // Affiche le message informatif quand on entre une lettre dans le nom
 $("#name").keyup(function(){
-    $(".text-danger-emphasis").removeClass("invisible");
+    $(".text-danger-emphasis").removeClass("visually-hidden");
 });
-
 
 // affiche les chansons comme je veux
 function afficheChanson(chanson) {
@@ -75,6 +74,8 @@ function modifier(){
 
 // bouton supprimer
 function supprimer(){
+    // ferme la fenêtre modal
+    FermeModal();
     let numID = $("#numID").val();
     // enlève le champ required des inputs quand on supprime parce qu'on a seulement besoin l'id
     $("#name").removeAttr("required");
@@ -96,6 +97,12 @@ function supprimer(){
     }
 }
 
+// fonction qui permet de fermer la fenêtre modal
+function FermeModal(){
+    $('#IdModal').modal('hide'); // Fermer le modal
+}
+
+// affiche les chansons dans mon site
 afficheChanson();
 
 

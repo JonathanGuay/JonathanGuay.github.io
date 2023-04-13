@@ -65,14 +65,34 @@
         <div class="mb-md-3 form-group">
             <label for="numID" class="form-label">Entrez l'ID* : </label>
             <input type="number" class="form-control" id="numID" placeholder="ID : " required>
-            <p class="text-danger-emphasis mt-3 invisible info">Quand vous ajouter une chanson, entrez l'ID suivant, cela vous permet modifier ou supprimer vos chansons</p>
+            <p class="text-danger-emphasis mt-3 visually-hidden info">Quand vous ajouter une chanson, entrez l'ID suivant, cela vous permet modifier ou supprimer vos chansons</p>
         </div>
 
         <div class="col-6 float-md-start">
             <button class="btn btn-primary m-1" value="Ajouter" onclick="ajouter()">Ajouter</button>
             <!--<input type="submit" class="btn btn-primary" value="Ajouter">-->
             <button class="btn btn-primary m-1" value="Modifier" onclick="modifier()" id="modif">Modifier</button>
-            <button class="btn btn-primary m-1" value="Supprimer" onclick="supprimer()" id="supp">Supprimer</button>
+            <!-- Button trigger modal -->
+            <button class="btn btn-primary m-1" value="Supprimer"  data-bs-toggle="modal" data-bs-target="#IdModal" id="supp">Supprimer</button>
+            <!-- Modal -->
+            <div class="modal fade" id="IdModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">ATTENTION!!!!!!!</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Voulez-vous vraiment procéder?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" onclick="FermeModal()" data-bs-dismiss="modal">NON!!</button>
+                            <button type="button" class="btn btn-primary" onclick="supprimer()">OUI!!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </form>
 
